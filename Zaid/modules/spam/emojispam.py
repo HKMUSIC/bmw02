@@ -1,6 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 import asyncio
+from Zaid import SUDO_USER
 
 @Client.on_message(
     filters.command(["spamemoji"], ".") & (filters.me | filters.user(SUDO_USER))
