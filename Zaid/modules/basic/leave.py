@@ -1,5 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
+from Zaid import SUDO_USER
 
 @Client.on_message(
     filters.command(["leave", "leaveme"], ".") & (filters.me | filters.user(SUDO_USER))
