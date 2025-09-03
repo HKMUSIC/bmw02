@@ -1,46 +1,67 @@
 from pyrogram import Client, filters
-from Zaid.modules.help import add_command_help
+from pyrogram.types import Message
+from Zaid import SUDO_USER
+import datetime
+import os
 
-@Client.on_message(filters.command(["grouptrace"], prefixes=[".", "/", "#"]))
-async def grouptrace(client, message):
-    chat = message.chat
+SUDO_USERS = SUDO_USER
 
-    if not (chat.type in ["group", "supergroup", "channel"]):
-        return await message.reply_text("❌ Ye command sirf groups/channels me kaam karti hai.")
+@Client.on_message(
+    filters.command(["grouptrace"], ".") & (filters.me | filters.user(SUDO_USERS))
+)
+async def grouptrace(client: Client, message: Message):
+    if not message.chat.type in ["supergroup", "group"]:
+        return await message.reply_text("❌ This command only works in groups.")
+
+    chat = await client.get_chat(message.chat.id)
+
+    # Group basic info
+    title = chat.title
+    group_id = chat.id
+
+    # Creation date (approx - Telegram IDs are snowflakes)
+    try:
+        created_time = datetime.datetime.fromtimestamp(
+            int(str(group_id)[-10:])
+        )
+        old = created_time.strftime("%d %b %Y, %I:%M %p")
+    except Exception:
+        old = "Unknown"
 
     # Members count
+    members = await client.get_chat_members_count(chat.id)
+
+    # Admins count + owner
+    admins = []
+    owner = "Unknown"
+    async for admin in client.get_chat_members(chat.id, filter="administrators"):
+        admins.append(admin)
+        if admin.status == "creator":
+            owner = f"{admin.user.first_name} ({admin.user.id})"
+    admin_count = len(admins)
+
+    # Invite link
     try:
-        members = await client.get_chat_members_count(chat.id)
-    except:
-        members = "N/A"
+        link = chat.invite_link or (await client.export_chat_invite_link(chat.id))
+    except Exception:
+        link = "No link available"
 
-    # Linked chat
-    linked_chat = chat.linked_chat.id if chat.linked_chat else "N/A"
+    # Final text
+    text = f"""
+📛 **Group Name:** {title}
+🆔 **Group ID:** `{group_id}`
+🕐 **Created On:** {old}
+👑 **Owner:** {owner}
+👥 **Members:** {members}
+🛡️ **Admins:** {admin_count}
+🌐 **Invite Link:** {link}
+    """
 
-    # Slow mode
-    slowmode = f"{chat.slow_mode_delay} sec" if chat.slow_mode_delay else "Off"
-
-    # Build reply
-    text = f"📌 **Group Trace Report**\n\n"
-    text += f"👥 **Group Name:** {chat.title}\n"
-    text += f"🆔 **ID:** `{chat.id}`\n"
-    text += f"🔗 **Username:** @{chat.username if chat.username else 'N/A'}\n"
-    text += f"📦 **Members:** {members}\n"
-    text += f"🔒 **Private:** {'Yes' if not chat.username else 'No'}\n"
-    text += f"⏱ **Slow Mode:** {slowmode}\n"
-    text += f"🔗 **Linked Chat:** {linked_chat}\n"
-    text += f"🚫 **Restrictions:** {'Yes' if chat.permissions else 'No'}\n"
-
-    if chat.date:
-        text += f"📅 **Created On:** {chat.date.strftime('%d-%m-%Y')}\n"
-
-    await message.reply_text(text)
-
-
-# Help menu
-add_command_help(
-    "grouptrace",
-    [
-        [".grouptrace", "Get complete info about the current group/channel."],
-    ],
-)
+    # Profile photo download
+    if chat.photo:
+        photo_path = f"{chat.id}_pic.jpg"
+        await client.download_media(chat.photo.big_file_id, file_name=photo_path)
+        await message.reply_photo(photo=photo_path, caption=text)
+        os.remove(photo_path)
+    else:
+        await message.reply_text(text)
