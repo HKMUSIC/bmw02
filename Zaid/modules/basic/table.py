@@ -1,3 +1,4 @@
+import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from Zaid import SUDO_USER
@@ -10,8 +11,10 @@ async def table_cmd(client: Client, message: Message):
         return
     
     num = int(args[1])
-    result = f"📊 Multiplication Table 📊\n\n"
+    result = f"📊 Multiplication Table of {num} 📊\n\n"
+    m = await message.reply_text("📊 Generating table...")
+
     for i in range(1, 11):
         result += f"{num} × {i} = {num * i}\n"
-    
-    await message.reply_text(result)
+        await m.edit_text(result)
+        await asyncio.sleep(0.5)  # delay for smooth effect
