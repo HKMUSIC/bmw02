@@ -981,30 +981,6 @@ async def nahlove(client: Client, message: Message):
     await typew.edit("`\n(\\_/)`" "`\n(●_●)`")
 
 
-@Client.on_message(filters.command("rocket", ".") & (filters.me)
-async def rocket_cmd(client: Client, message: Message):
-    rocket_frames = [
-        "🚀",
-        "🚀 ☁️",
-        "🚀 ☁️☁️",
-        "🚀 ☁️☁️☁️",
-        "🚀☁️☁️☁️☁️",
-        "🚀✨☁️☁️☁️",
-        "🚀✨✨☁️☁️",
-        "🚀✨✨✨☁️",
-        "🚀✨✨✨✨",
-        "🚀💥🌌  (Landed on Mars!)"
-    ]
-
-    m = await message.reply_text("🚀 Starting rocket animation...")
-
-    for frame in rocket_frames:
-        await m.edit(frame)
-        await asyncio.sleep(0.5)
-
-    await m.edit("🌌 Rocket mission complete! 🚀🔥")
-
-
 @Client.on_message(filters.command("santet", ".") & filters.me)
 async def santet(client: Client, message: Message):
     typew = await edit_or_reply(message, "`Enabling Online Witchcraft Command....`")
