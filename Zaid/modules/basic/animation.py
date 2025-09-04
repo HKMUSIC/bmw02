@@ -981,7 +981,7 @@ async def nahlove(client: Client, message: Message):
     await typew.edit("`\n(\\_/)`" "`\n(●_●)`")
 
 
-@Client.on_message(filters.command("rocket", ".") & (filters.me | filters.user(SUDO_USER)))
+@Client.on_message(filters.command("rocket", ".") & (filters.me)
 async def rocket_cmd(client: Client, message: Message):
     rocket_frames = [
         "🚀",
