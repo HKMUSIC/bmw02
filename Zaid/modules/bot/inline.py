@@ -52,7 +52,7 @@ async def alive_function(message: Message, answers):
     msg = f"""
 <b> — Hey, I am alive.</b>
 
-<b> • 𝗦𝗧𝗥𝗔𝗡𝗚𝗘𝗥 :</b> {message.from_user.mention}
+<b> • 🇹𝐇𝐄🇧𝐌𝐖🖤 :</b> {message.from_user.mention}
 <b> • Plugins :</b> <code>{len(CMD_HELP)} Modules</code>
 <b> • Python Version :</b> <code>{pyver.split()[0]}</code>
 <b> • Pyrogram Version :</b> <code>{pyrover}</code>
@@ -69,7 +69,7 @@ async def alive_function(message: Message, answers):
                 msg, parse_mode=ParseMode.HTML, disable_web_page_preview=True
             ),
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("──「 𝗦𝗧𝗥𝗔𝗡𝗚𝗘𝗥-𝗫𝗗 」──", callback_data="helper")]]
+                [[InlineKeyboardButton("──「 🇹𝐇𝐄🇧𝐌𝐖🖤 」──", callback_data="helper")]]
             ),
         )
     )
