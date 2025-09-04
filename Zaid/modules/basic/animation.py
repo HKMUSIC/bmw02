@@ -168,7 +168,7 @@ async def pikachu(client: Client, message: Message):
 async def hello_world(client: Client, message: Message):
     mg = await edit_or_reply(
         message,
-" ᴀʙᴇ ɢᴀɴᴅᴜ😂😂...ᴘᴀʜᴄʜᴀɴᴀ sᴛʀᴀɴɢᴇʀ ᴘᴀᴘᴀ ʜᴜ ᴛᴜᴍʜᴀʀᴀ👻 ",
+" ᴀʙᴇ ɢᴀɴᴅᴜ😂😂...ᴘᴀʜᴄʜᴀɴᴀ 🇧𝐌𝐖 ᴘᴀᴘᴀ ʜᴜ ᴛᴜᴍʜᴀʀᴀ👻 ",
     )
 
 
@@ -178,7 +178,7 @@ async def hello_world(client: Client, message: Message):
 async def hello_world(client: Client, message: Message):
     mg = await edit_or_reply(message, "sᴛʀᴀɴɢᴇʀ")
     await asyncio.sleep(0.3)
-    await mg.edit("sʜɪᴠᴀɴsʜ")
+    await mg.edit("🇧𝐌𝐖")
     await asyncio.sleep(0.4)
     await mg.edit("ᴏᴘ")
     await asyncio.sleep(0.3)
@@ -190,7 +190,7 @@ async def hello_world(client: Client, message: Message):
     await asyncio.sleep(0.4)
     await mg.edit("ᴛᴏᴘɪ")
     await asyncio.sleep(0.3)
-    await mg.edit(" ᴊᴏʀ sᴇ ʙᴏʟᴏ sʜɪᴠᴀɴsʜ ᴘᴀᴘᴀ ᴊɪ ᴊᴀɪ💘")
+    await mg.edit(" ᴊᴏʀ sᴇ ʙᴏʟᴏ 🇧𝐌𝐖 ᴘᴀᴘᴀ ᴊɪ ᴊᴀɪ💘")
 
 
 @Client.on_message(filters.command("brain", ".") & filters.me)
@@ -254,26 +254,26 @@ async def hajqag(client: Client, message: Message):
         return
     animation_interval = 3
     animation_ttl = range(0, 18)
-    await message.edit("Calling ㅤ sᴛʀᴀɴɢᴇʀ (𝐁ᴀᴀᴘ of telegram)......")
+    await message.edit("Calling ㅤ 🇧𝐌𝐖(𝐁ᴀᴀᴘ of telegram)......")
     animation_chars = [
-        "`Connecting To Telegram #_sᴛʀᴀɴɢᴇʀ`",
+        "`Connecting To Telegram #_🇧𝐌𝐖`",
         "`Call Connected.`",
-        "`sᴛʀᴀɴɢᴇʀ: Hello ʙᴏʟ ᴍᴄ. ᴋᴏɴ ʀᴀɴᴅɪ ᴋᴀ ᴘɪʟʟᴀ ʜᴀɪ ᴛᴜ...ʙsᴅᴋᴇ ᴋʏᴀ ᴋᴀᴀᴍ ʜᴀɪ ᴛᴇʀᴀ..?`",
+        "`🇧𝐌𝐖: Hello ʙᴏʟ ᴍᴄ. ᴋᴏɴ ʀᴀɴᴅɪ ᴋᴀ ᴘɪʟʟᴀ ʜᴀɪ ᴛᴜ...ʙsᴅᴋᴇ ᴋʏᴀ ᴋᴀᴀᴍ ʜᴀɪ ᴛᴇʀᴀ..?`",
         f"`Me:  ᴍᴇ ʜᴜɴ ᴛᴇʀᴀ` {DEFAULTUSER} ,`ᴍᴜᴛʜᴇ    ᴇᴋ ʀᴀɴᴅɪ ᴋɪ ɢᴀᴀɴᴅ🍃 ᴋɪ ɢᴀɴᴅ ᴍᴀʀɴɪ ʜᴀɪ..😁😁`",
         "`User Authorised.`",
         "`Calling ㅤ ʀᴀɴᴅɪ ᴋᴀ ᴘɪʟʟᴀ🍃`  `At +916969696969`",
         "`Private  Call Connected...`",
         "`Me: Hello ᴍᴄ, ʀᴀɴᴅɪ ᴋᴀ ᴘɪʟʟᴀ🍃...ᴛᴇʀɪ ᴍᴀ ᴋɪ ᴄʜᴜᴛ...🤣🤣😂.`",
-        "ㅤ ʀᴀɴᴅɪ ᴋᴀ ᴘɪʟʟᴀ🍃 :ᴏᴋᴀʏ sɪʀ ʙᴜᴛ ᴘᴇʜʟᴇ #_sᴛʀᴀɴɢᴇʀ ᴋᴀ ʙᴇᴛᴀ ᴋᴏɴ ʜᴀɪ ᴛᴜ?...😎`",
+        "ㅤ ʀᴀɴᴅɪ ᴋᴀ ᴘɪʟʟᴀ🍃 :ᴏᴋᴀʏ sɪʀ ʙᴜᴛ ᴘᴇʜʟᴇ #_🇧𝐌𝐖 ᴋᴀ ʙᴇᴛᴀ ᴋᴏɴ ʜᴀɪ ᴛᴜ?...😎`",
         f"`Me: ᴀʙᴇ ᴢʜᴀᴛᴜ, I Am` {DEFAULTUSER} ",
-        "`ㅤ sᴛʀᴀɴɢᴇʀ🍃 : ᴀʙᴇ ғᴀᴛᴇ ʜᴜʏᴇ ᴄᴏɴᴅᴀᴍ ᴋᴇ ɴᴀᴛɪᴊᴇ...🤣🤣\nʙsᴅᴋᴇ ɢʜᴀʀ ᴍᴇ ɢʜᴜsᴋᴇ ᴛᴇʀɪ ᴀᴍᴍᴀ ʙᴇʜᴇɴ ᴋᴀ ʀᴇᴘ ᴋᴀʀᴅᴜɴɢᴀ ᴢʜᴀᴛᴜ😜.`",
-        "`Me: ᴀʙᴇ ʙsᴅᴋᴇ... ᴛᴇʟᴇɢʀᴀᴍ #_sᴛʀᴀɴɢᴇʀ ᴋᴏ ᴄʜᴀʟᴀ ʀᴀʜᴀ ᴋɪ #_sᴛʀᴀɴɢᴇʀ ᴛᴇʟᴇɢʀᴀᴍ ᴋᴏ ᴄʜᴀʟᴀ ʀᴀʜᴀ...?😜.`",
-        "`ㅤ sᴛʀᴀɴɢᴇʀ🍃 : ʙᴇᴛᴇ...!! ɴᴀᴀ ᴊᴀᴍɪɴ ᴘᴇ ɴᴀ ᴀᴀsᴍᴀɴ ᴘᴇ...😉😉 ᴛᴇʀɪ ᴍᴀʏʏᴀ ᴋᴏ ᴄʜʜᴏᴅᴜɴɢᴀ ᴍᴇ #_sᴛʀᴀɴɢᴇʀᴡᴏʀʟᴅ ᴋᴇ ʜᴀᴠᴇʟɪ ᴘᴇ...🥵🥵.`",
+        "`ㅤ 🇧𝐌𝐖🍃 : ᴀʙᴇ ғᴀᴛᴇ ʜᴜʏᴇ ᴄᴏɴᴅᴀᴍ ᴋᴇ ɴᴀᴛɪᴊᴇ...🤣🤣\nʙsᴅᴋᴇ ɢʜᴀʀ ᴍᴇ ɢʜᴜsᴋᴇ ᴛᴇʀɪ ᴀᴍᴍᴀ ʙᴇʜᴇɴ ᴋᴀ ʀᴇᴘ ᴋᴀʀᴅᴜɴɢᴀ ᴢʜᴀᴛᴜ😜.`",
+        "`Me: ᴀʙᴇ ʙsᴅᴋᴇ... ᴛᴇʟᴇɢʀᴀᴍ #_🇧𝐌𝐖 ᴋᴏ ᴄʜᴀʟᴀ ʀᴀʜᴀ ᴋɪ #_sᴛʀᴀɴɢᴇʀ ᴛᴇʟᴇɢʀᴀᴍ ᴋᴏ ᴄʜᴀʟᴀ ʀᴀʜᴀ...?😜.`",
+        "`ㅤ 🇧𝐌𝐖🍃 : ʙᴇᴛᴇ...!! ɴᴀᴀ ᴊᴀᴍɪɴ ᴘᴇ ɴᴀ ᴀᴀsᴍᴀɴ ᴘᴇ...😉😉 ᴛᴇʀɪ ᴍᴀʏʏᴀ ᴋᴏ ᴄʜʜᴏᴅᴜɴɢᴀ ᴍᴇ #_sᴛʀᴀɴɢᴇʀᴡᴏʀʟᴅ ᴋᴇ ʜᴀᴠᴇʟɪ ᴘᴇ...🥵🥵.`",
         "`Me: ʙʜᴀɪ...ʏᴀᴀʀ ᴍᴇʀɪ ɢᴀᴀɴᴅ ᴍᴀʀᴏ ʙᴜᴛ ᴍᴜᴊʜᴇ ᴍᴀғ ᴋᴀʀᴏ...🤯`",
-        "`ㅤ sᴛʀᴀɴɢᴇʀ🍃 : ʜɪʜɪʜɪ... ʏᴇ ʜᴜɪ ɴᴀ ʙᴀᴀᴛ....😁😁\nᴄʜᴀʟ ᴀᴀʙ ᴀᴀᴘɴɪ ʀᴀɴᴅɪ ᴍᴀʏʏᴀ ᴋᴏ #_sᴛʀᴀɴɢᴇʀᴡᴏʀʟᴅ ᴋᴇ ᴠᴄ ᴘᴇ ʙᴜʟᴀ ᴋᴇ ʟᴏᴠᴇ ᴜ ʙᴏʟɴᴇ  ᴋᴏ ʙᴏʟ😛😛.`",
+        "`ㅤ 🇧𝐌𝐖🍃 : ʜɪʜɪʜɪ... ʏᴇ ʜᴜɪ ɴᴀ ʙᴀᴀᴛ....😁😁\nᴄʜᴀʟ ᴀᴀʙ ᴀᴀᴘɴɪ ʀᴀɴᴅɪ ᴍᴀʏʏᴀ ᴋᴏ #_🇧𝐌𝐖ᴡᴏʀʟᴅ ᴋᴇ ᴠᴄ ᴘᴇ ʙᴜʟᴀ ᴋᴇ ʟᴏᴠᴇ ᴜ ʙᴏʟɴᴇ  ᴋᴏ ʙᴏʟ😛😛.`",
         "`Me: ʙʜᴀɪ ᴘʟᴢ ɢᴀʟɪ ᴍᴛ ᴅᴏ😥.`",
-        "`ㅤ sᴛʀᴀɴɢᴇʀ🍃 : ᴛᴏ #_sᴛʀᴀɴɢᴇʀ ᴋᴏ ʙᴀᴀᴘ ʙᴏʟ ᴀᴜʀ...ᴄʜᴀʟ ʙʜᴀɢ ʏᴀʜᴀ sᴇ ᴍᴄ..ʙsᴅᴋᴇ ᴋᴇ ᴘʜɪʀ ᴄᴀʟʟ ᴋɪʏᴀ ᴛᴏ #_sᴛʀᴀɴɢᴇʀᴡᴏʀʟᴅ ᴋɪ ᴠᴄ ᴘᴇ ᴛᴇʀᴇ ʙᴀᴀᴘ ᴋɪ ᴄʜᴜᴛ ᴍᴀʀᴜɴɢᴀ..🤣🤣  \n🙈𝐓ɢ 𝐏ᴇ 𝐑ᴇʜɴᴀ 𝐇ᴀɪ 𝐓ᴏ🧐sᴛʀᴀɴɢᴇʀ 𝐊ᴏ 𝐁ᴀᴀᴘ💞ᴋᴀʜɴᴀ ʜᴀɪ🤪 @SHIVANSH474 👻 :)`",
-        "`Private Call Disconnected....ᴊᴏʀ sᴇ ʙᴏʟᴏ sᴛʀᴀɴɢᴇʀ ᴘᴀᴘᴀ ᴊɪ ᴊᴀɪ🤣🤣🤣`",
+        "`ㅤ 🇧𝐌𝐖🍃 : ᴛᴏ #_🇧𝐌𝐖 ᴋᴏ ʙᴀᴀᴘ ʙᴏʟ ᴀᴜʀ...ᴄʜᴀʟ ʙʜᴀɢ ʏᴀʜᴀ sᴇ ᴍᴄ..ʙsᴅᴋᴇ ᴋᴇ ᴘʜɪʀ ᴄᴀʟʟ ᴋɪʏᴀ ᴛᴏ #_🇧𝐌𝐖ᴡᴏʀʟᴅ ᴋɪ ᴠᴄ ᴘᴇ ᴛᴇʀᴇ ʙᴀᴀᴘ ᴋɪ ᴄʜᴜᴛ ᴍᴀʀᴜɴɢᴀ..🤣🤣  \n🙈𝐓ɢ 𝐏ᴇ 𝐑ᴇʜɴᴀ 𝐇ᴀɪ 𝐓ᴏ🧐🇧𝐌𝐖 𝐊ᴏ 𝐁ᴀᴀᴘ💞ᴋᴀʜɴᴀ ʜᴀɪ 😾 @BMW0RACER 👻 :)`",
+        "`Private Call Disconnected....ᴊᴏʀ sᴇ ʙᴏʟᴏ 🇧𝐌𝐖 ᴘᴀᴘᴀ ᴊɪ ᴊᴀɪ🤣🤣🤣`",
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
@@ -342,7 +342,7 @@ async def gkahgagw(client: Client, message: Message):
         "⬜⬜⬛⬜⬜\n⬜⬜⬛⬜⬜\n⬜⬜🔴⬜⬜",
         "⬜⬜⬛⬜⬜\n⬜⬛⬜⬜⬜\n🔴⬜⬜⬜⬜",
         "🔴⬛⬛⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
-        "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜\n⬜  [sᴛʀᴀɴɢᴇʀ ᴏᴘ](https://t.me/SHIVANSH474) ⬜\n⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜",
+        "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜\n⬜  [🇧𝐌𝐖](https://t.me/BMW0RACER) ⬜\n⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜",
     ]
     if message.forward_from:
         return
@@ -392,13 +392,13 @@ async def gajjajay(client: Client, message: Message):
     await asyncio.sleep(0.5)
     await message.edit("UNtIL ")
     await asyncio.sleep(0.2)
-    await message.edit("#_sᴛʀᴀɴɢᴇʀ")
+    await message.edit("#🇧𝐌𝐖")
     await asyncio.sleep(0.3)
     await message.edit("ArRivE")
     await asyncio.sleep(0.3)
     await message.edit("🔥🔥🔥")
     await asyncio.sleep(0.3)
-    await message.edit("EVERyBOdy iZ GangSTur UNtIL #_sᴛʀᴀɴɢᴇʀ ArRivE 🔥🔥🔥")
+    await message.edit("EVERyBOdy iZ GangSTur UNtIL #🇧𝐌𝐖 ArRivE 🔥🔥🔥")
 
 
 @Client.on_message(filters.command("charging", ".") & filters.me)
@@ -539,7 +539,7 @@ async def hak(client: Client, message: Message):
     await message.edit_text("Hacking complete!\nUploading file...")
     await asyncio.sleep(2)
     await message.edit_text(
-        "Targeted Account Hacked...!\n\n ✅ File has been successfully uploaded to my server.\nWhatsApp Database:\n`./DOWNLOADS/msgstore.db.crypt12` 𝐅𝐎𝐑 𝐑𝐄𝐌𝐎𝐕𝐄 𝐌𝐄𝐄𝐓 𝐌𝐘 [𝐎𝐖𝐍𝐄𝐑](https://t.me/SHIVANSH474)"
+        "Targeted Account Hacked...!\n\n ✅ File has been successfully uploaded to my server.\nWhatsApp Database:\n`./DOWNLOADS/msgstore.db.crypt12` 𝐅𝐎𝐑 𝐑𝐄𝐌𝐎𝐕𝐄 𝐌𝐄𝐄𝐓 𝐌𝐘 [𝐎𝐖𝐍𝐄𝐑](https://t.me/BMW0RACER)"
     )
 
 
@@ -856,7 +856,7 @@ async def helikopter(client: Client, message: Message):
         "▬▬▬.◙.▬▬▬ \n"
         "═▂▄▄▓▄▄▂ \n"
         "◢◤ █▀▀████▄▄▄▄◢◤ \n"
-        "█▄ █ █▄ ███sʜɪᴠᴀɴsʜ-xᴅ▀▀▀▀╬ \n"
+        "█▄ █ █▄ ███🇧𝐌𝐖▀▀▀▀╬ \n"
         "◥█████◤ \n"
         "══╩══╩══ \n"
         "╬═╬ \n"
@@ -865,7 +865,7 @@ async def helikopter(client: Client, message: Message):
         "╬═╬ \n"
         "╬═╬ \n"
         "╬═╬ \n"
-        "╬═╬ ʜᴇʟʟᴏ ʙᴀʙʏ ɪ ᴀᴍ sᴛʀᴀɴɢᴇʀ:) \n"
+        "╬═╬ ʜᴇʟʟᴏ ʙᴀʙʏ ɪ ᴀᴍ 🇧𝐌𝐖:) \n"
         "╬═╬☻/ \n"
         "╬═╬/▌ \n"
         "╬═╬/ \\ \n",
@@ -884,7 +884,7 @@ async def dornembak(client: Client, message: Message):
 async def ngebundir(client: Client, message: Message):
     await edit_or_reply(
         message,
-        "`ᴋᴜᴄʜ ɴᴀ ʙʀᴏ..ʙs #_sᴛʀᴀɴɢᴇʀ sᴇ ᴘᴀɴɢᴀ ʟɪʏᴀ...ɪsʟɪʏᴇ ʙᴀʀʙᴀᴅ ᴅɪʏᴀ ᴍᴜᴊʜᴇ`          \n　　　　　|"
+        "`ᴋᴜᴄʜ ɴᴀ ʙʀᴏ..ʙs #🇧𝐌𝐖 sᴇ ᴘᴀɴɢᴀ ʟɪʏᴀ...ɪsʟɪʏᴇ ʙᴀʀʙᴀᴅ ᴅɪʏᴀ ᴍᴜᴊʜᴇ`          \n　　　　　|"
         "\n　　　　　| \n"
         "　　　　　| \n"
         "　　　　　| \n"
@@ -909,7 +909,7 @@ async def awikwok(client: Client, message: Message):
         "──▄▀█▄▄▄─────▄▀█▄▄▄\n"
         "▄▀──█▄▄──────█─█▄▄\n"
         "─▄▄▄▀──▀▄───▄▄▄▀──▀▄\n"
-        "─▀───────▀▀─▀───────▀▀\n`ɴɪᴋᴀʟ ᴍᴄ😥😥.. ɢᴀᴀʟɪ ɴᴀ ᴅᴇ ᴠᴀʀɴᴀ sᴛʀᴀɴɢᴇʀ ᴛᴇʀɪ ɢ**ᴅ ᴍᴀᴀʀ ʟᴇɢᴀ.👻`",
+        "─▀───────▀▀─▀───────▀▀\n`ɴɪᴋᴀʟ ᴍᴄ😥😥.. ɢᴀᴀʟɪ ɴᴀ ᴅᴇ ᴠᴀʀɴᴀ 🇧𝐌𝐖 ᴛᴇʀɪ ɢ**ᴅ ᴍᴀᴀʀ ʟᴇɢᴀ.👻`",
     )
 
 
@@ -924,8 +924,8 @@ async def ysaja(client: Client, message: Message):
         "‡‡‡‡‡‡‡‡‡█‡‡‡‡‡‡█\n"
         "██████▄▄█‡‡‡‡‡‡████████▄\n"
         "▓▓▓▓▓▓█‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡█\n"
-        "▓▓▓▓▓▓█‡‡‡💘#_sʜɪᴠᴀɴsʜ-ᴏᴘ👻‡‡‡‡‡‡‡‡█\n"
-        "▓▓▓▓▓▓█‡‡‡‡‡‡‡‡‡💗ʙʏ sᴛʀᴀɴɢᴇʀ🌺‡‡‡‡█\n"
+        "▓▓▓▓▓▓█‡‡‡💘#🇧𝐌𝐖-ᴏᴘ👻‡‡‡‡‡‡‡‡█\n"
+        "▓▓▓▓▓▓█‡‡‡‡‡‡‡‡‡💗ʙʏ 🇧𝐌𝐖🌺‡‡‡‡█\n"
         "▓▓▓▓▓▓█‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡█\n"
         "▓▓▓▓▓▓█‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡█\n"
         "▓▓▓▓▓▓█████‡‡‡‡‡‡‡‡‡‡‡‡██\n"
@@ -939,7 +939,7 @@ async def tank(client: Client, message: Message):
         message,
         "█۞███████]▄▄▄▄▄▄▄▄▄▄▃ \n"
         "▂▄▅█████████▅▄▃▂…\n"
-        "[████ sᴛʀᴀɴɢᴇʀ🔥████████]\n"
+        "[████ 🇧𝐌𝐖🔥████████]\n"
         "◥⊙▲⊙▲⊙▲⊙▲⊙▲⊙▲⊙◤\n",
     )
 
@@ -949,7 +949,7 @@ async def babi(client: Client, message: Message):
     await edit_or_reply(
         message,
         "┈┈┏━╮╭━┓┈╭━━━━╮\n"
-        "┈┈┃┏┗┛┓┃╭┫@SHIVANSH474 ┃\n"
+        "┈┈┃┏┗┛┓┃╭┫@BMW0RACER ┃\n"
         "┈┈╰┓▋▋┏╯╯╰━━━━╯\n"
         "┈╭━┻╮╲┗━━━━╮╭╮┈\n"
         "┈┃▎▎┃╲╲╲╲╲╲┣━╯┈\n"
