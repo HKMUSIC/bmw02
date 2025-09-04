@@ -1,8 +1,8 @@
 import re
 
-Devs = [6762113050, 6919199044]
-Owner = int(6762113050)
-Sudos = [6762113050, 6919199044]
+Devs = [6686606485, 7553434931]
+Owner = int(6686606485)
+Sudos = [8331698936, 8421118572, 8453194070]
 
 def user_errors(error):
     if '[400 USERNAME_NOT_OCCUPIED]' in str(error):
@@ -48,7 +48,7 @@ async def user_only(client, message, Owner, Sudos):
         return 
 
     if int(user.id) in Devs:
-        await message.reply_text(f"{user.mention} ɪs ᴏᴡɴᴇʀ/ᴅᴇᴠ ᴏғ @SHIVANSHDEVS")
+        await message.reply_text(f"{user.mention} ɪs ᴏᴡɴᴇʀ/ᴅᴇᴠ ᴏғ @BMW0RACER")
         return
     if int(user.id) == Owner:
         await message.reply_text(f"{user.mention} ɪs ᴏᴡɴᴇʀ ᴏғ ᴛʜᴇsᴇ ʙᴏᴛs!")
