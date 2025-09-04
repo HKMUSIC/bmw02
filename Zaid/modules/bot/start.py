@@ -33,7 +33,7 @@ class Data:
 
     buttons = [
         generate_single_button,
-        [InlineKeyboardButton("˹𝐁ᴍᴡ ✘ 𝐇ᴏꜱᴛᴇʀ˼", url="https://t.me/BMW_USER_01_BOT")],
+        [InlineKeyboardButton("˹𝐏𝐫𝐨𝐱𝐲 ✘ 𝐇ᴏꜱᴛᴇʀ˼", url="https://t.me/Dark01Proxy_Bot")],
         [
             InlineKeyboardButton("❔ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ", callback_data="help"),
             InlineKeyboardButton("ᴀʙᴏᴜᴛ 🎶", callback_data="about")
@@ -47,7 +47,7 @@ class Data:
 
     START = """
 **╭━━━〔 🌐 ɪɴғᴏ 🌐 〕━━━╮**
-**┃ ✦ ʜᴇʟʟᴏ, ᴍʏ ɴᴀᴍᴇ ɪs : [˹𝐁ᴍᴡ ✘ 𝐇ᴏꜱᴛᴇʀ˼](https://t.me/BMW_USER_01_BOT)**  
+**┃ ✦ ʜᴇʟʟᴏ, ᴍʏ ɴᴀᴍᴇ ɪs : [˹𝐏𝐫𝐨𝐱𝐲 ✘ 𝐇ᴏꜱᴛᴇʀ˼](https://t.me/Dark01Proxy_Bot)**  
 **┃ ✦ ᴘʟᴇᴀsᴜʀᴇ ᴛᴏ ᴍᴇᴇᴛ ʏᴏᴜ !**  
 **╰━━━━━━━━━━━━━━━━━━╯**
 
