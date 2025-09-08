@@ -14,6 +14,30 @@ BLOCKED = "**ʙᴇᴇᴘ ʙᴏᴏᴘ ꜰᴏᴜɴᴅᴇᴅ ᴀ ꜱᴘᴀᴍᴍᴇ
 LIMIT = 5
 
 
+# ------------------- PM GUARD -------------------
+
+async def pm_guard(user_id: int) -> bool:
+    """
+    Check if PM Guard is enabled for a user.
+    Default = False
+    """
+    result = await collection.find_one({"_id": user_id})
+    if not result:
+        return False
+    return result.get("pm_guard", False)
+
+
+async def set_pm_guard(user_id: int, value: bool):
+    """
+    Enable/Disable PM Guard for a user.
+    """
+    await collection.update_one(
+        {"_id": user_id},
+        {"$set": {"pm_guard": value}},
+        upsert=True,
+    )
+
+
 # ------------------- PER USER FUNCTIONS -------------------
 
 async def set_pm(user_id: int, value: bool):
@@ -98,4 +122,5 @@ async def deny_user(user_id: int, chat: int):
         {"_id": user_id},
         {"$pull": {"approved_users": chat}},
         upsert=True,
-    )
+            )
+    
