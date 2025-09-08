@@ -1,11 +1,10 @@
 from Zaid.database import cli
-import asyncio
 
 collection = cli["Zaid"]["pmpermit"]
 
 PMPERMIT_MESSAGE = (
     "**ᴡᴀʀɴɪɴɢ!⚠️ ᴘʟᴢ ʀᴇᴀᴅ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴄᴀʀᴇꜰᴜʟʟʏ..\n\n**"
-    "**ɪ'ᴍ sᴛʀᴀɴɢᴇʀ ᴜꜱᴇʀʙᴏᴛ ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ᴘʀᴏᴛᴇᴄᴛ ᴍʏ ᴍᴀꜱᴛᴇʀ ꜰʀᴏᴍ ꜱᴘᴀᴍᴍᴇʀꜱ.**"
+    "**ɪ'ᴍ ʙᴍᴡ ᴜꜱᴇʀʙᴏᴛ ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ᴘʀᴏᴛᴇᴄᴛ ᴍʏ ᴍᴀꜱᴛᴇʀ ꜰʀᴏᴍ ꜱᴘᴀᴍᴍᴇʀꜱ.**"
     "**ɪꜰ ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀ ꜱᴘᴀᴍᴍᴇʀ ᴛʜᴇɴ ᴘʟᴢ ᴡᴀɪᴛ!.\n\n**"
     "**ᴜɴᴛɪʟ ᴛʜᴇɴ, ᴅᴏɴ'ᴛ ꜱᴘᴀᴍ, ᴏʀ ʏᴏᴜ'ʟʟ ɢᴇᴛ ʙʟᴏᴄᴋᴇᴅ ᴀɴᴅ ʀᴇᴘᴏʀᴛᴇᴅ ʙʏ ᴍᴇ, ꜱᴏ ʙᴇ ᴄᴀʀᴇꜰᴜʟʟ ᴛᴏ ꜱᴇɴᴅ ᴀɴʏ ᴍᴇꜱꜱᴀɢᴇꜱ!**"
 )
@@ -15,68 +14,88 @@ BLOCKED = "**ʙᴇᴇᴘ ʙᴏᴏᴘ ꜰᴏᴜɴᴅᴇᴅ ᴀ ꜱᴘᴀᴍᴍᴇ
 LIMIT = 5
 
 
-async def set_pm(value: bool):
-    doc = {"_id": 1, "pmpermit": value}
-    doc2 = {"_id": "Approved", "users": []}
-    r = await collection.find_one({"_id": 1})
-    r2 = await collection.find_one({"_id": "Approved"})
-    if r:
-        await collection.update_one({"_id": 1}, {"$set": {"pmpermit": value}})
-    else:
-        await collection.insert_one(doc)
-    if not r2:
-        await collection.insert_one(doc2)
+# ------------------- PER USER FUNCTIONS -------------------
+
+async def set_pm(user_id: int, value: bool):
+    await collection.update_one(
+        {"_id": user_id},
+        {"$set": {"pmpermit": value}},
+        upsert=True,
+    )
 
 
-async def set_permit_message(text):
-    await collection.update_one({"_id": 1}, {"$set": {"pmpermit_message": text}})
-
-
-async def set_block_message(text):
-    await collection.update_one({"_id": 1}, {"$set": {"block_message": text}})
-
-
-async def set_limit(limit):
-    await collection.update_one({"_id": 1}, {"$set": {"limit": limit}})
-
-
-async def get_pm_settings():
-    result = await collection.find_one({"_id": 1})
+async def get_pm(user_id: int):
+    result = await collection.find_one({"_id": user_id})
     if not result:
         return False
-    pmpermit = result["pmpermit"]
-    pm_message = result.get("pmpermit_message", PMPERMIT_MESSAGE)
-    block_message = result.get("block_message", BLOCKED)
-    limit = result.get("limit", LIMIT)
-    return pmpermit, pm_message, limit, block_message
+    return result.get("pmpermit", False)
 
 
-async def allow_user(chat):
-    doc = {"_id": "Approved", "users": [chat]}
-    r = await collection.find_one({"_id": "Approved"})
-    if r:
-        await collection.update_one({"_id": "Approved"}, {"$push": {"users": chat}})
-    else:
-        await collection.insert_one(doc)
+async def set_permit_message(user_id: int, text: str):
+    await collection.update_one(
+        {"_id": user_id},
+        {"$set": {"pmpermit_message": text}},
+        upsert=True,
+    )
 
 
-async def get_approved_users():
-    results = await collection.find_one({"_id": "Approved"})
-    if results:
-        return results["users"]
-    else:
-        return []
-
-
-async def deny_user(chat):
-    await collection.update_one({"_id": "Approved"}, {"$pull": {"users": chat}})
-
-
-async def pm_guard():
-    result = await collection.find_one({"_id": 1})
+async def get_permit_message(user_id: int):
+    result = await collection.find_one({"_id": user_id})
     if not result:
-        return False
-    if not result["pmpermit"]:
-        return False
-    else:
-        return True
+        return PMPERMIT_MESSAGE
+    return result.get("pmpermit_message", PMPERMIT_MESSAGE)
+
+
+async def set_block_message(user_id: int, text: str):
+    await collection.update_one(
+        {"_id": user_id},
+        {"$set": {"block_message": text}},
+        upsert=True,
+    )
+
+
+async def get_block_message(user_id: int):
+    result = await collection.find_one({"_id": user_id})
+    if not result:
+        return BLOCKED
+    return result.get("block_message", BLOCKED)
+
+
+async def set_limit(user_id: int, limit: int):
+    await collection.update_one(
+        {"_id": user_id},
+        {"$set": {"limit": limit}},
+        upsert=True,
+    )
+
+
+async def get_limit(user_id: int):
+    result = await collection.find_one({"_id": user_id})
+    if not result:
+        return LIMIT
+    return result.get("limit", LIMIT)
+
+
+# ------------------- APPROVED USERS (PER USER) -------------------
+
+async def allow_user(user_id: int, chat: int):
+    await collection.update_one(
+        {"_id": user_id},
+        {"$addToSet": {"approved_users": chat}},
+        upsert=True,
+    )
+
+
+async def get_approved_users(user_id: int):
+    result = await collection.find_one({"_id": user_id})
+    if result:
+        return result.get("approved_users", [])
+    return []
+
+
+async def deny_user(user_id: int, chat: int):
+    await collection.update_one(
+        {"_id": user_id},
+        {"$pull": {"approved_users": chat}},
+        upsert=True,
+    )
