@@ -39,7 +39,7 @@ async def mentionall(client: Client, message: Message):
                 await client.send_message(chat_id, txt)
             elif direp:
                 await direp.reply(usrtxt)
-            await sleep(2)
+            await sleep(4)
             usrnum = 0
             usrtxt = ""
     try:
