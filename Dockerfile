@@ -1,9 +1,33 @@
 FROM python:3.10-slim
-RUN apt-get update
-RUN apt-get install git curl python3-pip ffmpeg -y
-RUN pip3 install -U pip
-RUN python3 -m pip install --upgrade pip
-COPY . /app/
-WORKDIR /app/
-RUN pip3 install -U -r requirements.txt
-CMD ["bash","start.sh"]
+
+# Install essential system packages
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git \
+    curl \
+    ffmpeg \
+    gcc \
+    g++ \
+    build-essential \
+    libffi-dev \
+    libssl-dev \
+    libxml2-dev \
+    libxslt1-dev \
+    libgl1 \
+    libglib2.0-0 \
+    libmediainfo-dev \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Upgrade pip, setuptools, wheel
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel
+
+# Set working directory
+WORKDIR /app
+
+# Copy project files
+COPY . .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Start command
+CMD ["bash", "start.sh"]
