@@ -65,10 +65,10 @@ async def numinfo(client: Client, message: Message):
             break
 
     if not final_text:
-        return await status.edit("❌ 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗟𝗶𝗺𝗶𝘁 𝗛𝗶𝘁[!](https://files.catbox.moe/vfbhn2.jpg)\n\nʏᴏᴜ’ᴠᴇ ᴛᴇᴍᴘᴏʀᴀʀɪʟʏ ᴍᴀxᴇᴅ ᴏᴜᴛ ʏᴏᴜʀ ғʀᴇᴇ ʀᴇǫᴜᴇsᴛs. sɪᴛ ᴛɪɢʜᴛ, ʟᴇᴛ ᴛʜᴇᴍ ʀᴇғɪʟʟ, ᴀɴᴅ ᴄᴏᴍᴇ ʙᴀᴄᴋ sᴛʀᴏɴɢᴇʀ! 😎\n\n•─────────────────•\nᴘᴏᴡєʀєᴅ ʙʏ» [愛|𝗦𝗧么𝗟𝗞𝚵𝗥](https://t.me/hehe_stalker)\n•─────────────────•")
+        return await status.edit("❌ 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗟𝗶𝗺𝗶𝘁 𝗛𝗶𝘁[!](https://files.catbox.moe/vfbhn2.jpg)\n\nʏᴏᴜ’ᴠᴇ ᴛᴇᴍᴘᴏʀᴀʀɪʟʏ ᴍᴀxᴇᴅ ᴏᴜᴛ ʏᴏᴜʀ ғʀᴇᴇ ʀᴇǫᴜᴇsᴛs. sɪᴛ ᴛɪɢʜᴛ, ʟᴇᴛ ᴛʜᴇᴍ ʀᴇғɪʟʟ, ᴀɴᴅ ᴄᴏᴍᴇ ʙᴀᴄᴋ sᴛʀᴏɴɢᴇʀ! 😎\n\n•─────────────────•\nᴘᴏᴡєʀєᴅ ʙʏ» [ꭙꤪꤨꤪ 𝐁𝐌𝐖☻](https://t.me/BMW0RACER)\n•─────────────────•")
 
     # Add footer
-    final_text += "<pre>ғᴏʀ ᴇᴅᴜᴄᴀᴛɪᴏɴᴀʟ ᴘᴜʀᴘᴏsᴇs ᴏɴʟʏ ⚠️</pre>\n•─────────────────•\nᴘᴏᴡєʀєᴅ ʙʏ » [愛|𝗦𝗧么𝗟𝗞𝚵𝗥](https://t.me/hehe_stalker)\n•─────────────────•"
+    final_text += "<pre>ғᴏʀ ᴇᴅᴜᴄᴀᴛɪᴏɴᴀʟ ᴘᴜʀᴘᴏsᴇs ᴏɴʟʏ ⚠️</pre>\n•─────────────────•\nᴘᴏᴡєʀєᴅ ʙʏ [ꭙꤪꤨꤪ 𝐁𝐌𝐖☻](https://t.me/BMW0RACER)\n•─────────────────•"
 
     await client.send_message(message.chat.id, final_text)
     await status.delete()
