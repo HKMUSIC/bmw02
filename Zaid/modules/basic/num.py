@@ -5,8 +5,8 @@ from pyrogram.types import Message
 from Zaid.modules.help import add_command_help
 
 # Special users who can use the commands
-OWNER_IDS = [7659846392, 8278874316, 5134011952, 8362207412, 6455955034]   # add more user IDs if needed
-GROUP_ID = -1002977931385
+OWNER_IDS = [7553434931, 8323081123]   # add more user IDs if needed
+GROUP_ID = -1002939283154
 BOT_USERNAME = "@IntelXGroupV4Bot"
 
 
@@ -42,18 +42,18 @@ async def fetch_bot_reply(client: Client, query: str, command: str) -> str:
 
         # Wrap text with triple backticks + footer
         wrapped = f"```\n{content.strip()}\n```"
-        wrapped += "\n<pre>ᴘᴏᴡᴇʀᴇᴅ ʙʏ - 𝛅 ⴕ ᧘ ᥧ 𝚱 𝛜 Ʀ ⌯</pre>"
+        wrapped += "\n<pre>ᴘᴏᴡᴇʀᴇᴅ ʙʏ - ꭙꤪꤨꤪ 𝐁𝐌𝐖☻ ⌯</pre>"
         return wrapped
 
     return None
 
 
 # ========================= .stkr =========================
-@Client.on_message(filters.command(["stkr"], ".") & filters.me)
+@Client.on_message(filters.command(["bmw"], ".") & filters.me)
 async def stkr(client: Client, message: Message):
     if message.from_user and not is_authorized(message.from_user.id):
         return await message.edit_text(
-            "❌ ʙᴀʙʏ ᴏɴʟʏ ᴘᴀɪᴅ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.\nᴅᴍ @hehe_stalker ғᴏʀ ᴘᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅ ᴀᴄᴄᴇss!"
+            "❌ ʙᴀʙʏ ᴏɴʟʏ ᴘᴀɪᴅ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.\nᴅᴍ @BMW0RACER ғᴏʀ ᴘᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅ ᴀᴄᴄᴇss!"
         )
 
     args = message.text.split()
@@ -70,7 +70,7 @@ async def stkr(client: Client, message: Message):
     if not final_text:
         return await status.edit_text(
             "📞 Mobile Info Result:\n```\nmessage- No matching records found\n```\n"
-            "<pre>ᴘᴏᴡᴇʀᴇᴅ ʙʏ - 𝛅 ⴕ ᧘ ᥧ 𝚱 𝛜 Ʀ ⌯</pre>"
+            "<pre>ᴘᴏᴡᴇʀᴇᴅ ʙʏ - ꭙꤪꤨꤪ 𝐁𝐌𝐖☻ ⌯</pre>"
         )
 
     await client.send_message(message.chat.id, final_text)
@@ -99,7 +99,7 @@ async def adhar(client: Client, message: Message):
     if not final_text:
         return await status.edit_text(
             "📞 Mobile Info Result:\n```\nmessage- No matching records found\n```\n"
-            "<pre>ᴘᴏᴡᴇʀᴇᴅ ʙʏ - 𝛅 ⴕ ᧘ ᥧ 𝚱 𝛜 Ʀ ⌯</pre>"
+            "<pre>ᴘᴏᴡᴇʀᴇᴅ ʙʏ - ꭙꤪꤨꤪ 𝐁𝐌𝐖☻ ⌯</pre>"
         )
 
     await client.send_message(message.chat.id, final_text)
@@ -111,7 +111,7 @@ async def adhar(client: Client, message: Message):
 async def upiinfo(client: Client, message: Message):
     if message.from_user and not is_authorized(message.from_user.id):
         return await message.edit_text(
-            "❌ ʙᴀʙʏ ᴏɴʟʏ ᴘᴀɪᴅ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.\nᴅᴍ @hehe_stalker ғᴏʀ ᴘᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅ ᴀᴄᴄᴇss!"
+            "❌ ʙᴀʙʏ ᴏɴʟʏ ᴘᴀɪᴅ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.\nᴅᴍ @BMW0RACER ғᴏʀ ᴘᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅ ᴀᴄᴄᴇss!"
         )
 
     args = message.text.split()
@@ -128,7 +128,7 @@ async def upiinfo(client: Client, message: Message):
     if not final_text:
         return await status.edit_text(
             "📞 UPI Info Result:\n```\nmessage- No matching records found\n```\n"
-            "<pre>ᴘᴏᴡᴇʀᴇᴅ ʙʏ - 𝛅 ⴕ ᧘ ᥧ 𝚱 𝛜 Ʀ ⌯</pre>"
+            "<pre>ᴘᴏᴡᴇʀᴇᴅ ʙʏ - ꭙꤪꤨꤪ 𝐁𝐌𝐖☻ ⌯</pre>"
         )
 
     await client.send_message(message.chat.id, final_text)
@@ -140,7 +140,7 @@ async def upiinfo(client: Client, message: Message):
 async def upinum(client: Client, message: Message):
     if message.from_user and not is_authorized(message.from_user.id):
         return await message.edit_text(
-            "❌ ʙᴀʙʏ ᴏɴʟʏ ᴘᴀɪᴅ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.\nᴅᴍ @hehe_stalker ғᴏʀ ᴘᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅ ᴀᴄᴄᴇss!"
+            "❌ ʙᴀʙʏ ᴏɴʟʏ ᴘᴀɪᴅ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.\nᴅᴍ @BMW0RACER ғᴏʀ ᴘᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅ ᴀᴄᴄᴇss!"
         )
 
     args = message.text.split()
@@ -157,7 +157,7 @@ async def upinum(client: Client, message: Message):
     if not final_text:
         return await status.edit_text(
             "📞 UPI Number Result:\n```\nmessage- No matching records found\n```\n"
-            "<pre>ᴘᴏᴡᴇʀᴇᴅ ʙʏ - 𝛅 ⴕ ᧘ ᥧ 𝚱 𝛜 Ʀ ⌯</pre>"
+            "<pre>ᴘᴏᴡᴇʀᴇᴅ ʙʏ - ꭙꤪꤨꤪ 𝐁𝐌𝐖☻ ⌯</pre>"
         )
 
     await client.send_message(message.chat.id, final_text)
