@@ -4,6 +4,7 @@ from pyrogram.errors import SessionPasswordNeeded
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pymongo import MongoClient
 from config import OWNER_ID, ALIVE_PIC, MONGO_URL
+from Zaid.database import botbandb as BotDB
 from Zaid import app, API_ID, API_HASH
 from pyrogram.types import CallbackQuery, InputMediaPhoto
 
@@ -105,15 +106,32 @@ class Data:
 **ʏᴏᴜʀ sᴍᴀʟʟ ᴀᴍᴏᴜɴᴛ ᴄᴀɴ ʜᴇʟᴘ ᴜs ᴀɴᴅ sᴛʀᴀɴɢᴇʀ ᴛᴏ ɢʀᴏᴡ ᴍᴏʀᴇ**
 """
 
-# Commands
+# Command
 @app.on_message(filters.command("start"))
 async def start_handler(client: Client, message: Message):
+
+    # 🔥 BOT BAN CHECK
+    if await BotDB.is_botbanned(message.from_user.id):
+        return await client.send_message(
+            chat_id=message.chat.id,
+            text=(
+                "**🚫 You Are Banned From Using This Bot!**\n"
+                "Baap ke DM jaa kar @aiused **sorry bol** 😈\n\n"
+                "You cannot access the bot commands."
+            )
+        )
+
+    # 🔥 NORMAL START MESSAGE
     await client.send_photo(
         chat_id=message.chat.id,
         photo=ALIVE_PIC,
         caption=Data.START,
         reply_markup=InlineKeyboardMarkup(Data.buttons)
     )
+
+
+
+
 
 @app.on_message(filters.command("help") & filters.private)
 async def help_command(client: Client, message: Message):
