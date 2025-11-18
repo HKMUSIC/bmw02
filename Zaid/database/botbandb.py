@@ -1,7 +1,7 @@
 from motor.motor_asyncio import AsyncIOMotorClient
 
-# Use same MONGO_URI as project
-from config import MONGO_URI
+# config se MONGO_URL import karna hai
+from config import MONGO_URL as MONGO_URI
 
 client = AsyncIOMotorClient(MONGO_URI)
 db = client["ZaidRobot"]
