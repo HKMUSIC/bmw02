@@ -135,6 +135,18 @@ async def start_handler(client: Client, message: Message):
 
 @app.on_message(filters.command("help") & filters.private)
 async def help_command(client: Client, message: Message):
+
+        # 🔥 BOT BAN CHECK
+    if await BotDB.is_botbanned(message.from_user.id):
+        return await client.send_message(
+            chat_id=message.chat.id,
+            text=(
+                "**🚫 You Are Banned From Using This Bot!**\n"
+                "Baap ke DM jaa kar @BMW0RACER **sorry bol** 😈\n\n"
+                "You cannot access the bot commands."
+            )
+        )
+    
     await message.reply_text(
         Data.HELP,
         reply_markup=InlineKeyboardMarkup(Data.home_buttons)
@@ -142,6 +154,18 @@ async def help_command(client: Client, message: Message):
 
 @app.on_message(filters.command("about") & filters.private)
 async def about_command(client: Client, message: Message):
+
+        # 🔥 BOT BAN CHECK
+    if await BotDB.is_botbanned(message.from_user.id):
+        return await client.send_message(
+            chat_id=message.chat.id,
+            text=(
+                "**🚫 You Are Banned From Using This Bot!**\n"
+                "Baap ke DM jaa kar @BMW0RACER **sorry bol** 😈\n\n"
+                "You cannot access the bot commands."
+            )
+        )
+    
     await message.reply_text(
         Data.ABOUT,
         reply_markup=InlineKeyboardMarkup(Data.home_buttons)
@@ -199,6 +223,18 @@ async def restart_all_sessions():
 
 @app.on_message(filters.command("start") & filters.private)
 async def start_command(_, message: Message):
+
+        # 🔥 BOT BAN CHECK
+    if await BotDB.is_botbanned(message.from_user.id):
+        return await client.send_message(
+            chat_id=message.chat.id,
+            text=(
+                "**🚫 You Are Banned From Using This Bot!**\n"
+                "Baap ke DM jaa kar @BMW0RACER **sorry bol** 😈\n\n"
+                "You cannot access the bot commands."
+            )
+        )
+    
     reply_markup = InlineKeyboardMarkup(Data.buttons)
     await client.send_photo(
         chat_id=message.chat.id,
@@ -208,6 +244,18 @@ async def start_command(_, message: Message):
 
 @app.on_message(filters.command("clone") & filters.private)
 async def clone(bot: app, msg: Message):
+
+        # 🔥 BOT BAN CHECK
+    if await BotDB.is_botbanned(message.from_user.id):
+        return await client.send_message(
+            chat_id=message.chat.id,
+            text=(
+                "**🚫 You Are Banned From Using This Bot!**\n"
+                "Baap ke DM jaa kar @BMW0RACER **sorry bol** 😈\n\n"
+                "You cannot access the bot commands."
+            )
+        )
+   
     chat = msg.chat
     text = await msg.reply("❍ FIRST GEN SESSION \n\n𔓕 /clone session\n\n❍ OR - USE  \n\n𔓕 /add ( ғᴏʀ ᴀᴜᴛᴏ-ʜᴏsᴛ )")
     cmd = msg.command
@@ -225,6 +273,18 @@ async def clone(bot: app, msg: Message):
 
 @app.on_message(filters.command("add") & filters.private)
 async def add_session_command(client, message: Message):
+
+        # 🔥 BOT BAN CHECK
+    if await BotDB.is_botbanned(message.from_user.id):
+        return await client.send_message(
+            chat_id=message.chat.id,
+            text=(
+                "**🚫 You Are Banned From Using This Bot!**\n"
+                "Baap ke DM jaa kar @BMW0RACER **sorry bol** 😈\n\n"
+                "You cannot access the bot commands."
+            )
+        )
+
     user_id = message.from_user.id
     await message.reply("📲 ᴘʟᴇᴀsᴇ sᴇɴᴅ ʏᴏᴜʀ ᴘʜᴏɴᴇ ɴᴜᴍʙᴇʀ ɪɴ ɪɴᴛᴇʀɴᴀᴛɪᴏɴᴀʟ ғᴏʀᴍᴀᴛ (e.g., +918200000009):")
     user_sessions[user_id] = {"step": "awaiting_phone"}
@@ -232,6 +292,18 @@ async def add_session_command(client, message: Message):
 
 @app.on_message(filters.command("remove") & filters.private)
 async def remove_session(_, msg: Message):
+
+        # 🔥 BOT BAN CHECK
+    if await BotDB.is_botbanned(message.from_user.id):
+        return await client.send_message(
+            chat_id=message.chat.id,
+            text=(
+                "**🚫 You Are Banned From Using This Bot!**\n"
+                "Baap ke DM jaa kar @BMW0RACER **sorry bol** 😈\n\n"
+                "You cannot access the bot commands."
+            )
+        )
+    
     uid = msg.from_user.id
     session_data = sessions_col.find_one({"_id": uid})
     if not session_data:
