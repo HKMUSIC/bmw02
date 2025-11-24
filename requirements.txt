@@ -15,13 +15,11 @@ pymongo==4.3.2
 python-dotenv
 pymediainfo
 prettytable
-# Py-Trans (translation module)
 git+https://github.com/Itz-fork/py-trans.git
-# Official Pyrogram (Telegram API library)
 pyrogram==2.0.106
 tgcrypto
 reportlab
-svglib
+cairosvg
 speedtest-cli==2.1.3
 telegraph
 uwuify
