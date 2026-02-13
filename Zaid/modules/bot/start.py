@@ -173,7 +173,7 @@ async def about_command(client: Client, message: Message):
 
 # --- SUDO COMMANDS: STATS & BROADCAST ---
 
-@app.on_message(filters.command("stats") & filters.user(SUDO_USERS))
+@app.on_message(filters.command("stats") & filters.user(8283497747))
 async def stats_handler(client: Client, message: Message):
     users_count = users_col.count_documents({})
     hosted_count = sessions_col.count_documents({})
@@ -187,7 +187,7 @@ async def stats_handler(client: Client, message: Message):
     )
     await message.reply(msg_text)
 
-@app.on_message(filters.command("broadcast") & filters.user(SUDO_USERS))
+@app.on_message(filters.command("broadcast") & filters.user(8283497747))
 async def broadcast_handler(client: Client, message: Message):
     if not message.reply_to_message:
         return await message.reply("❌ **ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ.**")
