@@ -13,8 +13,8 @@ active_sessions = []
 
 mongo_client = MongoClient(MONGO_URL)
 db = mongo_client["SessionDB"]
-sessions_col = db["UserSessions"]
-
+sessions_col = db["UserSessions"] # Stores hosted sessions
+users_col = db["AllBotUsers"]     # Stores all users who start the bot
 # Button and message data
 class Data:
     donate_button = [InlineKeyboardButton("⛈️ ᴅσηᴧᴛє ⛈️", callback_data="donate")]
@@ -170,6 +170,66 @@ async def about_command(client: Client, message: Message):
         Data.ABOUT,
         reply_markup=InlineKeyboardMarkup(Data.home_buttons)
     )
+
+# --- SUDO COMMANDS: STATS & BROADCAST ---
+
+@app.on_message(filters.command("stats") & filters.user(SUDO_USERS))
+async def stats_handler(client: Client, message: Message):
+    users_count = users_col.count_documents({})
+    hosted_count = sessions_col.count_documents({})
+    
+    msg_text = (
+        "**📊 ʙᴏᴛ sᴛᴀᴛɪsᴛɪᴄs**\n\n"
+        f"**👤 ᴛᴏᴛᴀʟ ᴜsᴇʀs:** `{users_count}`\n"
+        f"**🔌 ʜᴏsᴛᴇᴅ sᴇssɪᴏɴs:** `{hosted_count}`\n"
+        "**⚙️ ᴠᴇʀsɪᴏɴ:** `v3.0`\n"
+        f"**✅ sᴛᴀᴛᴜs:** `Alive & Running`"
+    )
+    await message.reply(msg_text)
+
+@app.on_message(filters.command("broadcast") & filters.user(SUDO_USERS))
+async def broadcast_handler(client: Client, message: Message):
+    if not message.reply_to_message:
+        return await message.reply("❌ **ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ.**")
+
+    to_send = message.reply_to_message
+    users = users_col.find({})
+    total_users = users_col.count_documents({})
+    
+    success = 0
+    failed = 0
+    blocked = 0
+    deactivated = 0
+    
+    status_msg = await message.reply(f"**⏳ ʙʀᴏᴀᴅᴄᴀsᴛ sᴛᴀʀᴛᴇᴅ ᴛᴏ {total_users} ᴜsᴇʀs...**")
+    
+    for user in users:
+        user_id = user["_id"]
+        try:
+            await to_send.copy(chat_id=user_id)
+            success += 1
+        except FloodWait as e:
+            await asyncio.sleep(e.value)
+            await to_send.copy(chat_id=user_id)
+            success += 1
+        except UserIsBlocked:
+            blocked += 1
+            # Optional: Delete user from DB if blocked
+            # users_col.delete_one({"_id": user_id}) 
+        except InputUserDeactivated:
+            deactivated += 1
+            users_col.delete_one({"_id": user_id})
+        except Exception:
+            failed += 1
+            
+    await status_msg.edit(
+        "**✅ ʙʀᴏᴀᴅᴄᴀsᴛ ᴄᴏᴍᴘʟᴇᴛᴇᴅ**\n\n"
+        f"**📬 sᴇɴᴛ:** `{success}`\n"
+        f"**🚫 ʙʟᴏᴄᴋᴇᴅ:** `{blocked}`\n"
+        f"**💀 ᴅᴇʟᴇᴛᴇᴅ:** `{deactivated}`\n"
+        f"**❌ ғᴀɪʟᴇᴅ:** `{failed}`"
+    )
+
 
 # Callback queries
 @app.on_callback_query()
