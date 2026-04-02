@@ -1,5 +1,4 @@
 import asyncio
-from random import choice
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
@@ -9,60 +8,89 @@ from Zaid.database.rraid import *
 from Zaid import SUDO_USER
 
 SUDO_USERS = SUDO_USER
-TRAID_USERS = []
+
+# List ki jagah dictionary use kar rahe hain taaki group wise target save ho sake
+ACTIVE_TRAIDS = {}
 
 @Client.on_message(
-    filters.command(["traid", "untraid"], ".") & (filters.me | filters.user(SUDO_USER))
+    filters.command(["traid", "untraid"], ".") & (filters.me | filters.user(SUDO_USERS))
 )
 async def traid_cmd(xspam: Client, e: Message):
     cmd = e.command[0]
-    args = e.text.split(maxsplit=1)
+    chat_id = e.chat.id
     
-    target_user = None
-    
-    # Agar message ko reply kiya hai
-    if e.reply_to_message:
-        target_user = e.reply_to_message.from_user.id
-    # Agar command ke aage @username ya userid diya hai
-    elif len(args) > 1:
-        target_user = args[1]
-    else:
-        return await e.reply_text("ᴜsᴀɢᴇ: `.ᴛʀᴀɪᴅ @ᴜsᴇʀɴᴀᴍᴇ` / `ᴜsᴇʀɪᴅ` ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴍᴇssᴀɢᴇ.\nᴛᴏ sᴛᴏᴘ: `.ᴜɴᴛʀᴀɪᴅ @ᴜsᴇʀɴᴀᴍᴇ`")
-        
-    try:
-        # Pyrogram khud username ya id se user ki details nikal lega
-        user = await xspam.get_users(target_user)
-        user_id = user.id
-    except Exception:
-        return await e.reply_text("ɪɴᴠᴀʟɪᴅ ᴜsᴇʀɴᴀᴍᴇ/ɪᴅ ᴏʀ ᴜsᴇʀ ɴᴏᴛ ғᴏᴜɴᴅ.")
-
     if cmd == "traid":
+        args = e.text.split(maxsplit=1)
+        target_user = None
+        
+        # Agar message ko reply kiya hai
+        if e.reply_to_message:
+            target_user = e.reply_to_message.from_user.id
+        # Agar command ke aage @username ya userid diya hai
+        elif len(args) > 1:
+            target_user = args[1]
+        else:
+            return await e.reply_text("ᴜsᴀɢᴇ: `.ᴛʀᴀɪᴅ @ᴜsᴇʀɴᴀᴍᴇ` / `ᴜsᴇʀɪᴅ` ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴍᴇssᴀɢᴇ.\nᴛᴏ sᴛᴏᴘ: `.ᴜɴᴛʀᴀɪᴅ`")
+            
+        try:
+            # Pyrogram khud username ya id se user ki details nikal lega
+            user = await xspam.get_users(target_user)
+            user_id = user.id
+            first_name = user.first_name
+        except Exception:
+            return await e.reply_text("ɪɴᴠᴀʟɪᴅ ᴜsᴇʀɴᴀᴍᴇ/ɪᴅ ᴏʀ ᴜsᴇʀ ɴᴏᴛ ғᴏᴜɴᴅ.")
+
+        # VERIFIED_USERS list database / data se aani chahiye
         if int(user_id) in VERIFIED_USERS:
             return await e.reply_text("ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴛʀᴀɪᴅ ᴠᴇʀɪғɪᴇᴅ ᴜsᴇʀs 😈")
         elif int(user_id) in SUDO_USERS:
             return await e.reply_text("ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴛʀᴀɪᴅ sᴜᴅᴏ ᴜsᴇʀs 🛡️")
             
-        if user_id not in TRAID_USERS:
-            TRAID_USERS.append(user_id)
-        await e.reply_text(f"ᴛʀᴀɪᴅ ᴀᴄᴛɪᴠᴀᴛᴇᴅ ᴏɴ {user.first_name} 😈 (ɢʟᴏʙᴀʟʟʏ)")
+        # Chat ID ke hisaab se target save kar rahe hain
+        ACTIVE_TRAIDS[chat_id] = {"id": user_id, "name": first_name}
+        await e.reply_text(f"ᴛʀᴀɪᴅ ᴀᴄᴛɪᴠᴀᴛᴇᴅ ᴏɴ {first_name} 😈\n(ᴀʙ ᴀᴀᴘ ᴊᴏ ʙʜɪ ᴛʏᴘᴇ ᴋᴀʀᴇɴɢᴇ, ʏᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄ ᴛᴀɢ ʜᴏ ᴊᴀʏᴇɢᴀ)")
         
     elif cmd == "untraid":
-        if user_id in TRAID_USERS:
-            TRAID_USERS.remove(user_id)
-            await e.reply_text(f"ᴛʀᴀɪᴅ ᴅᴇᴀᴄᴛɪᴠᴀᴛᴇᴅ ғᴏʀ {user.first_name} 🤫")
+        if chat_id in ACTIVE_TRAIDS:
+            target_name = ACTIVE_TRAIDS[chat_id]["name"]
+            del ACTIVE_TRAIDS[chat_id]
+            await e.reply_text(f"ᴛʀᴀɪᴅ ᴅᴇᴀᴄᴛɪᴠᴀᴛᴇᴅ ғᴏʀ {target_name} 🤫")
         else:
-            await e.reply_text("ᴛʀᴀɪᴅ ɪs ɴᴏᴛ ᴀᴄᴛɪᴠᴇ ᴏɴ ᴛʜɪs ᴜsᴇʀ.")
+            await e.reply_text("ᴛʀᴀɪᴅ ɪs ɴᴏᴛ ᴀᴄᴛɪᴠᴇ ɪɴ ᴛʜɪs ᴄʜᴀᴛ.")
 
-# Watcher background me hamesha active rahega
-@Client.on_message(~filters.me & filters.group, group=10)
+# Watcher ab aapke aur SUDO users ke messages sune ga
+@Client.on_message((filters.me | filters.user(SUDO_USERS)) & filters.group, group=10)
 async def traid_watcher(xspam: Client, e: Message):
-    if not e.from_user:
-        return
+    chat_id = e.chat.id
     
-    # Ab ye sirf user_id check karega, matlab kisi bhi group me kaam karega
-    if e.from_user.id in TRAID_USERS:
-        reply_msg = choice(HIRAID) 
+    # Agar is group me koi traid active nahi hai, toh ignore karo
+    if chat_id not in ACTIVE_TRAIDS:
+        return
         
-        await asyncio.sleep(0.10)
-        await e.reply_text(reply_msg)
+    # Userbot commands ko tag nahi karna hai (jaise .ping, .help)
+    if e.text and e.text.startswith("."):
+        return
         
+    target = ACTIVE_TRAIDS[chat_id]
+    target_id = target["id"]
+    target_name = target["name"]
+    
+    # Target ka invisible ya normal mention banayenge
+    mention = f"[{target_name}](tg://user?id={target_id})"
+    
+    # Sirf text messages pe kaam karega taaki photos/stickers kharab na ho
+    if e.text:
+        # Agar message aapne khud (filters.me) bheja hai
+        if e.from_user and e.from_user.is_self:
+            try:
+                # Ye aapke message ko edit karke aage tag add kar dega
+                await e.edit_text(f"{e.text} {mention}")
+            except Exception:
+                pass
+        # Agar message kisi aur SUDO user ne bheja hai (Sudo ki msg bot edit nahi kar sakta)
+        else:
+            try:
+                await e.reply_text(mention)
+            except Exception:
+                pass
+                
