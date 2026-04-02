@@ -34,76 +34,75 @@ class Data:
 
     buttons = [
         generate_single_button,
-        [InlineKeyboardButton("˹𝐏𝐫𝐨𝐱𝐲 ✘ 𝐇ᴏꜱᴛᴇʀ˼", url="https://t.me/Dark01Proxy_Bot")],
+        [InlineKeyboardButton("𝐆𝛐𝑗𝛐 ✘ 𝐇ᴏꜱᴛᴇʀ˼", url="https://t.me/Infiuserbot")],
         [
             InlineKeyboardButton("❔ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ", callback_data="help"),
             InlineKeyboardButton("ᴀʙᴏᴜᴛ 🎶", callback_data="about")
         ],
         [
-            InlineKeyboardButton("⚡ ᴜᴘᴅᴀᴛᴇ's", url="https://t.me/BMW_USERBOT_II"),
-            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ ⛈️️", url="https://t.me/BMW_USERBOT_II")
+            InlineKeyboardButton("⚡ ᴜᴘᴅᴀᴛᴇ's", url="https://t.me/thedrxnet"),
+            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ ⛈️️", url="https://t.me/thedrxnet")
         ],
-        [InlineKeyboardButton("🌿 ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ 🌿", url="https://t.me/BMW0RACER")],
+        [InlineKeyboardButton("🌿 ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ 🌿", url="https://t.me/aiused")],
     ]
 
-    START = """
-**╭━━━〔 🌐 ɪɴғᴏ 🌐 〕━━━╮**
-**┃ ✦ ʜᴇʟʟᴏ, ᴍʏ ɴᴀᴍᴇ ɪs : [˹𝐏𝐫𝐨𝐱𝐲 ✘ 𝐇ᴏꜱᴛᴇʀ˼](https://t.me/Dark01Proxy_Bot)**  
-**┃ ✦ ᴘʟᴇᴀsᴜʀᴇ ᴛᴏ ᴍᴇᴇᴛ ʏᴏᴜ !**  
-**╰━━━━━━━━━━━━━━━━━━╯**
-
-**➤ ᴀ sᴛʀᴏɴɢ & ᴜsᴇғᴜʟ ɪᴅ-ʙᴏᴛ**  
-**➤ ғᴜɴ ғᴇᴀᴛᴜʀᴇs ᴀʀᴇ ᴀᴠᴀɪʟᴀʙʟᴇ**  
-**➤ ʜᴇʟᴘs ʏᴏᴜ ᴘᴏᴡᴇʀ ᴜᴘ ʏᴏᴜʀ ɪᴅ**  
-
-**⟡──────────────⟡**  
-**➤ ᴄʀᴇᴀᴛᴇᴅ ʙʏ : [꧁𓊈𒆜🆃🅷🅴 🅱🅼🆆𒆜𓊉꧂](https://t.me/BMW0RACER) 🚩**  
-**⟡──────────────⟡**
+START = """
+**┌──── ˹ ɪɴғᴏ ˼ ★**
+**┆◍ ʜᴇʏ, ɪ ᴀᴍ : [˹𝐆𝛐𝑗𝛐 𝐇ᴏꜱᴛᴇʀ˼](https://t.me/Infiuserbot)**
+**┆● ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ʏᴏᴜ !**
+**└────────────•**
+**❖ ᴘᴏᴡᴇʀғᴜʟ ɪᴅ-ᴜsᴇʀ-ʙᴏᴛ**
+**❖ ғᴏʀ ғᴜɴ & ɪᴅ ʙᴏᴏsᴛ**
+**•────────────•**
+**❖ ʙʏ : [𝐆𝛐𝑗𝛐 𝛊֟፝ؖ۬ꪀғ𝛊֟፝ؖ۬ꪀ𝛊֟፝ؖ۬𝛕𝛄](https://t.me/Infiuserbot) 🚩**
 """
 
-    HELP = """
-**ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ** ⚡
+HELP = """
+**ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ ⚡**
 
-**/start - ꜱᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ**
-/help - ᴏᴘᴇɴ ʜᴇʟᴘ ᴍᴇɴᴜ**
-/about - ᴀʙᴏᴜᴛ ᴛʜᴇ ʙᴏᴛ ᴀɴᴅ ᴏᴡɴᴇʀ**
-**/add - ᴀᴜᴛᴏ-ʜᴏsᴛ ᴛʜᴇ ʙᴏᴛ**
-**/clone - ᴄʟᴏɴᴇ ᴠɪᴀ sᴛʀɪɴɢ sᴇssɪᴏɴ**
-**/remove - ʟᴏɢᴏᴜᴛ ғʀᴏᴍ ʙᴏᴛ**
+**/start - ꜱᴛᴀʀᴛ**
+**/help - ʜᴇʟᴘ ᴍᴇɴᴜ**
+**/about - ᴀʙᴏᴜᴛ**
+**/add - ʜᴏsᴛ ʙᴏᴛ**
+**/clone - ᴄʟᴏɴᴇ**
+**/remove - ʟᴏɢᴏᴜᴛ**
 """
 
-    GUIDE = """**❖ ʜᴇʏ ᴅᴇᴀʀ, ᴛʜɪs ɪs ᴀ ǫᴜɪᴄᴋ ᴀɴᴅ sɪᴍᴘʟᴇ ɢᴜɪᴅᴇ ᴛᴏ ʜᴏsᴛɪɴɢ [ᴜsᴇʀʙᴏᴛ](https://t.me/BMW_USER_01_BOT)**
+GUIDE = """
+**❖ ʜᴇʏ ᴅᴇᴀʀ, ǫᴜɪᴄᴋ ɢᴜɪᴅᴇ ↓**
 
-**1) Sᴇɴᴅ /add ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ᴛʜᴇ ʙᴏᴛ **
-**2) Sᴇɴᴅ ʏᴏᴜʀ ᴘʜᴏɴᴇ ɴᴜᴍʙᴇʀ ɪɴ ɪɴᴛᴇʀɴᴀᴛɪᴏɴᴀʟ ғᴏʀᴍᴀᴛ (ᴇ.ɢ. +917800000000)**  
-**3) ᴄʜᴇᴄᴋ ʏᴏᴜʀ ɪᴅ ᴘᴇʀsᴏɴᴀʟ ᴍᴀssᴀɢᴇ ғᴏʀᴍ ᴛᴇʟᴇɢʀᴀᴍ, ᴀɴᴅ ᴄᴏᴘʏ ᴏʀ ʀᴇᴍɪɴᴅ ᴏᴛᴘ ᴀɴᴅ sᴇɴᴅ ᴛʜɪs ʙᴏᴛ sᴘᴀᴄᴇ ʙʏ sᴘᴀᴄᴇ ʟɪᴋᴇ :- 1 2 3 4 5**
+**1) /add ꜱᴇɴᴅ ᴋʀᴏ**
+**2) ɴᴜᴍʙᴇʀ ɪɴᴛᴇʀɴᴀᴛɪᴏɴᴀʟ ғᴏʀᴍᴀᴛ (+91...)**
+**3) ᴏᴛᴘ ꜱᴇɴᴅ ᴋʀᴏ (1 2 3 4 5)**
 
-**➤ ɪғ ʏᴏᴜ sᴇᴛ ᴛᴡᴏ sᴛᴇᴘ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴄᴏᴅᴇ ᴏɴ ʏᴏᴜʀ ɪᴅ , ᴛʜᴇɴ sᴇɴᴅ ᴛʜᴀᴛ ᴄᴏᴅᴇ.**
-**➤ ʏᴏᴜʀ ʙᴏᴛ ᴡɪʟʟ ʙᴇ ʜᴏsᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟ.**
+**➤ 2ꜱᴛᴇᴘ ᴄᴏᴅᴇ ʜᴏ ᴛᴏ ᴡᴏ ʙʜɪ ꜱᴇɴᴅ ᴋʀᴏ**
+**➤ ʙᴏᴛ ʜᴏꜱᴛ ʜᴏ ᴊᴀʏᴇɢᴀ**
 
-**ɪғ ʏᴏᴜ sᴛɪʟʟ ғᴀᴄᴇ ᴀɴʏ ɪssᴜᴇs, ғᴇᴇʟ ғʀᴇᴇ ᴛᴏ ʀᴇᴀᴄʜ ᴏᴜᴛ ғᴏʀ sᴜᴘᴘᴏʀᴛ.**"""
-
-    ABOUT = """
-**ᴀʙᴏᴜᴛ ᴛʜɪꜱ ʙᴏᴛ** 🌙
-
-**ᴛᴇʟᴇɢʀᴀᴍ ʙᴏᴛ ᴛᴏ ʙᴏᴏsᴛ ʏᴏᴜʀ ɪᴅ ᴡɪᴛʜ ʙᴇᴀᴜᴛɪғᴜʟ ᴀɴɪᴍᴀᴛɪᴏɴ.**
-
-**sᴜᴘᴘᴏʀᴛᴇᴅ :- ʀᴇᴘʟʏ-ʀᴀɪᴅ, ɪᴅ-ᴄʟᴏɴᴇ, ʀᴀɪᴅ, sᴘᴀᴍ, ᴜsᴇʀ-ᴛᴀɢɢᴇʀ ᴇᴛᴄ.**
-
-**◌ ʟᴀɴɢᴜᴀɢᴇ : [ᴘʏᴛʜᴏɴ](https://www.python.org)**
-**◌ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [꧁𓊈𒆜🆃🅷🅴 🅱🅼🆆𒆜𓊉꧂](https://t.me/BMW0RACER)**
-**◌ ᴅᴇᴠᴇʟᴏᴘᴇʀ : [꧁𓊈𒆜🆃🅷🅴 🅱🅼🆆𒆜𓊉꧂](https://t.me/BMW0RACER)**
+**ɪssᴜᴇ? ᴄᴏɴᴛᴀᴄᴛ ꜱᴜᴘᴘᴏʀᴛ**
 """
 
-    DONATE = """
-**❖ ʜᴇʏ, ɪ ᴀᴍ ɢʟᴀᴅ ᴛᴏ ᴋɴᴏᴡ ʏᴏᴜ ᴀʀᴇ ɪɴᴛᴇʀᴇsᴛᴇᴅ ɪɴ ᴅᴏɴᴀᴛɪɴɢ ᴜs ᴛʜᴀᴛ ᴍᴇᴀɴ ᴀ ʟᴏᴛ :)**
+ABOUT = """
+**ᴀʙᴏᴜᴛ ᴛʜɪꜱ ʙᴏᴛ 🌙**
 
-**ᴡᴇ ᴘʀᴏᴠɪᴅᴇ 24×7 ᴜsᴇʙᴏᴛ ʜᴏsᴛɪɴɢ sᴇʀᴠɪᴄᴇ. sᴏ ᴡᴇ ᴀʟsᴏ ɴᴇᴇᴅ sᴏᴍᴇ ʜᴇʟᴘ ғᴏʀ ɪᴛ, ᴅᴏɴᴀᴛᴇ ɴᴏᴡ ᴠɪᴀ :-**
-**• ᴜᴘɪ ɪᴅ » **`himanshu49@fam or himanshu4hk9@okhdfcbank`
-**• ǫʀ ᴄᴏᴅᴇ » [ᴛᴀᴘ ᴛᴏ sᴇᴇ ǫʀ ᴄᴏᴅᴇ](https://t.me/GOJO_PAY_49) **
-**• ʏᴏᴜ ᴄᴀɴ ᴀʟsᴏ ᴅᴏɴᴀᴛᴇ ʙʏ ᴄᴏɴᴛᴀᴄᴛɪɴɢ [ᴅᴇᴠᴇʟᴏᴘᴇʀ](https://t.me/BMW0RACER) 🚩**
+**ɪᴅ ʙᴏᴏꜱᴛ ᴡɪᴛʜ ᴀɴɪᴍᴀᴛɪᴏɴ**
 
-**ʏᴏᴜʀ sᴍᴀʟʟ ᴀᴍᴏᴜɴᴛ ᴄᴀɴ ʜᴇʟᴘ ᴜs ᴀɴᴅ sᴛʀᴀɴɢᴇʀ ᴛᴏ ɢʀᴏᴡ ᴍᴏʀᴇ**
+**ꜱᴜᴘᴘᴏʀᴛ :- ʀᴇᴘʟʏ-ʀᴀɪᴅ, ᴄʟᴏɴᴇ, ꜱᴘᴀᴍ, ᴛᴀɢɢᴇʀ**
+
+**◌ ʟᴀɴɢ : [ᴘʏᴛʜᴏɴ](https://www.python.org)**
+**◌ ᴘᴏᴡᴇʀ : [𝐆𝛐𝑗𝛐 𝛊֟፝ؖ۬ꪀғ𝛊֟፝ؖ۬ꪀ𝛊֟፝ؖ۬𝛕𝛄](https://t.me/AIUSED)**
+**◌ ᴅᴇᴠ : [𝐆𝛐𝑗𝛐 𝛊֟፝ؖ۬ꪀғ𝛊֟፝ؖ۬ꪀ𝛊֟፝ؖ۬𝛕𝛄](https://t.me/aiused)**
+"""
+
+DONATE = """
+**❖ ᴛʜᴀɴᴋꜱ ғᴏʀ ᴅᴏɴᴀᴛɪɴɢ ❤️**
+
+**24×7 ᴜꜱᴇʀʙᴏᴛ ʜᴏꜱᴛɪɴɢ ꜱᴇʀᴠɪᴄᴇ**
+
+**• ᴜᴘɪ »** `himanshu49@fam / himanshu4hk9@okhdfcbank`
+**• ǫʀ » [ᴛᴀᴘ](https://t.me/GOJO_PAY_49)**
+**• ᴄᴏɴᴛᴀᴄᴛ » [ᴅᴇᴠ](https://t.me/aiused)**
+
+**ʏᴏᴜʀ ꜱᴜᴘᴘᴏʀᴛ ʜᴇʟᴘꜱ ɢᴏᴊᴏ ❤️**
 """
 
 # Command
@@ -142,7 +141,7 @@ async def help_command(client: Client, message: Message):
             chat_id=message.chat.id,
             text=(
                 "**🚫 You Are Banned From Using This Bot!**\n"
-                "Baap ke DM jaa kar @BMW0RACER **sorry bol** 😈\n\n"
+                "Baap ke DM jaa kar @aiused **sorry bol** 😈\n\n"
                 "You cannot access the bot commands."
             )
         )
@@ -161,7 +160,7 @@ async def about_command(client: Client, message: Message):
             chat_id=message.chat.id,
             text=(
                 "**🚫 You Are Banned From Using This Bot!**\n"
-                "Baap ke DM jaa kar @BMW0RACER **sorry bol** 😈\n\n"
+                "Baap ke DM jaa kar @aiused **sorry bol** 😈\n\n"
                 "You cannot access the bot commands."
             )
         )
@@ -290,7 +289,7 @@ async def start_command(_, message: Message):
             chat_id=message.chat.id,
             text=(
                 "**🚫 You Are Banned From Using This Bot!**\n"
-                "Baap ke DM jaa kar @BMW0RACER **sorry bol** 😈\n\n"
+                "Baap ke DM jaa kar @aiused **sorry bol** 😈\n\n"
                 "You cannot access the bot commands."
             )
         )
@@ -311,7 +310,7 @@ async def clone(bot: app, msg: Message):
             chat_id=message.chat.id,
             text=(
                 "**🚫 You Are Banned From Using This Bot!**\n"
-                "Baap ke DM jaa kar @BMW0RACER **sorry bol** 😈\n\n"
+                "Baap ke DM jaa kar @aiused **sorry bol** 😈\n\n"
                 "You cannot access the bot commands."
             )
         )
@@ -340,7 +339,7 @@ async def add_session_command(client, message: Message):
             chat_id=message.chat.id,
             text=(
                 "**🚫 You Are Banned From Using This Bot!**\n"
-                "Baap ke DM jaa kar @BMW0RACER **sorry bol** 😈\n\n"
+                "Baap ke DM jaa kar @aiused **sorry bol** 😈\n\n"
                 "You cannot access the bot commands."
             )
         )
@@ -359,7 +358,7 @@ async def remove_session(_, msg: Message):
             chat_id=message.chat.id,
             text=(
                 "**🚫 You Are Banned From Using This Bot!**\n"
-                "Baap ke DM jaa kar @BMW0RACER **sorry bol** 😈\n\n"
+                "Baap ke DM jaa kar @aiused **sorry bol** 😈\n\n"
                 "You cannot access the bot commands."
             )
         )
