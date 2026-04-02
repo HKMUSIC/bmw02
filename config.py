@@ -9,11 +9,11 @@ if os.path.exists("local.env"):
 API_ID = int(getenv("API_ID", "6435225")) #optional
 API_HASH = getenv("API_HASH", "") #optional
 
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "7553434931").split()))
-OWNER_ID = int(getenv("OWNER_ID","6686606485"))
+SUDO_USERS = list(map(int, getenv("SUDO_USERS", "7288634560").split()))
+OWNER_ID = int(getenv("OWNER_ID","7553434931"))
 MONGO_URL = getenv("MONGO_URL")
 BOT_TOKEN = getenv("BOT_TOKEN", "")
-ALIVE_PIC = getenv("ALIVE_PIC", 'https://files.catbox.moe/38c6sp.jpg')
+ALIVE_PIC = getenv("ALIVE_PIC", 'https://files.catbox.moe/6bogx2.jpg')
 ALIVE_TEXT = getenv("ALIVE_TEXT")
 PM_LOGGER = getenv("PM_LOGGER")
 LOG_GROUP = getenv("LOG_GROUP")
