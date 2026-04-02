@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from Zaid.database import botbandb as BotDB
 
-BOT_ADMINS = [8323081123, 7553434931]
+BOT_ADMINS = [7288634560, 7553434931]
 
 def get_target_user(message: Message):
     """username / user_id / reply se user laane ka simple method"""
