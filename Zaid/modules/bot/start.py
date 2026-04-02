@@ -115,7 +115,7 @@ async def start_handler(client: Client, message: Message):
             chat_id=message.chat.id,
             text=(
                 "**🚫 You Are Banned From Using This Bot!**\n"
-                "Baap ke DM jaa kar @BMW0RACER **sorry bol** 😈\n\n"
+                "Baap ke DM jaa kar @aiused **sorry bol** 😈\n\n"
                 "You cannot access the bot commands."
             )
         )
