@@ -7,7 +7,7 @@ from Zaid.modules.help import add_command_help
 # Special users who can use the commands
 OWNER_IDS = [7553434931, 8323081123]   # add more user IDs if needed
 GROUP_ID = -1002939283154
-BOT_USERNAME = "@IntelXGroupV4Bot"
+BOT_USERNAME = "@Hivftjcssbot"
 
 
 def is_authorized(user_id: int) -> bool:
@@ -49,17 +49,17 @@ async def fetch_bot_reply(client: Client, query: str, command: str) -> str:
 
 
 # ========================= .stkr =========================
-@Client.on_message(filters.command(["bmw"], ".") & filters.me)
+@Client.on_message(filters.command(["gojo"], ".") & filters.me)
 async def stkr(client: Client, message: Message):
     if message.from_user and not is_authorized(message.from_user.id):
         return await message.edit_text(
-            "❌ ʙᴀʙʏ ᴏɴʟʏ ᴘᴀɪᴅ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.\nᴅᴍ @BMW0RACER ғᴏʀ ᴘᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅ ᴀᴄᴄᴇss!"
+            "❌ ʙᴀʙʏ ᴏɴʟʏ ᴘᴀɪᴅ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.\nᴅᴍ @aiused ғᴏʀ ᴘᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅ ᴀᴄᴄᴇss!"
         )
 
     args = message.text.split()
     if len(args) != 2 or not args[1].isdigit() or len(args[1]) != 10:
         return await message.edit_text(
-            "❌ Please provide a valid 10-digit number.\nExample: `.stkr 1234567890`"
+            "❌ Please provide a valid 10-digit number.\nExample: `.gojo 1234567890`"
         )
 
     number = args[1]
@@ -70,7 +70,7 @@ async def stkr(client: Client, message: Message):
     if not final_text:
         return await status.edit_text(
             "📞 Mobile Info Result:\n```\nmessage- No matching records found\n```\n"
-            "<pre>ᴘᴏᴡᴇʀᴇᴅ ʙʏ - ꭙꤪꤨꤪ 𝐁𝐌𝐖☻ ⌯</pre>"
+            "<pre>ᴘᴏᴡᴇʀᴇᴅ ʙʏ - ꭙꤪꤨꤪ ɢᴏᴊᴏ ⌯</pre>"
         )
 
     await client.send_message(message.chat.id, final_text)
@@ -82,7 +82,7 @@ async def stkr(client: Client, message: Message):
 async def adhar(client: Client, message: Message):
     if message.from_user and not is_authorized(message.from_user.id):
         return await message.edit_text(
-            "❌ ʙᴀʙʏ ᴏɴʟʏ ᴘᴀɪᴅ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.\nᴅᴍ @hehe_stalker ғᴏʀ ᴘᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅ ᴀᴄᴄᴇss!"
+            "❌ ʙᴀʙʏ ᴏɴʟʏ ᴘᴀɪᴅ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.\nᴅᴍ @aiused ғᴏʀ ᴘᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅ ᴀᴄᴄᴇss!"
         )
 
     args = message.text.split()
@@ -99,7 +99,7 @@ async def adhar(client: Client, message: Message):
     if not final_text:
         return await status.edit_text(
             "📞 Mobile Info Result:\n```\nmessage- No matching records found\n```\n"
-            "<pre>ᴘᴏᴡᴇʀᴇᴅ ʙʏ - ꭙꤪꤨꤪ 𝐁𝐌𝐖☻ ⌯</pre>"
+            "<pre>ᴘᴏᴡᴇʀᴇᴅ ʙʏ - ꭙꤪꤨꤪ GOJO ⌯</pre>"
         )
 
     await client.send_message(message.chat.id, final_text)
@@ -111,7 +111,7 @@ async def adhar(client: Client, message: Message):
 async def upiinfo(client: Client, message: Message):
     if message.from_user and not is_authorized(message.from_user.id):
         return await message.edit_text(
-            "❌ ʙᴀʙʏ ᴏɴʟʏ ᴘᴀɪᴅ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.\nᴅᴍ @BMW0RACER ғᴏʀ ᴘᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅ ᴀᴄᴄᴇss!"
+            "❌ ʙᴀʙʏ ᴏɴʟʏ ᴘᴀɪᴅ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.\nᴅᴍ @aiused ғᴏʀ ᴘᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅ ᴀᴄᴄᴇss!"
         )
 
     args = message.text.split()
@@ -128,7 +128,7 @@ async def upiinfo(client: Client, message: Message):
     if not final_text:
         return await status.edit_text(
             "📞 UPI Info Result:\n```\nmessage- No matching records found\n```\n"
-            "<pre>ᴘᴏᴡᴇʀᴇᴅ ʙʏ - ꭙꤪꤨꤪ 𝐁𝐌𝐖☻ ⌯</pre>"
+            "<pre>ᴘᴏᴡᴇʀᴇᴅ ʙʏ - ꭙꤪꤨꤪ GOJO⌯</pre>"
         )
 
     await client.send_message(message.chat.id, final_text)
@@ -140,7 +140,7 @@ async def upiinfo(client: Client, message: Message):
 async def upinum(client: Client, message: Message):
     if message.from_user and not is_authorized(message.from_user.id):
         return await message.edit_text(
-            "❌ ʙᴀʙʏ ᴏɴʟʏ ᴘᴀɪᴅ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.\nᴅᴍ @BMW0RACER ғᴏʀ ᴘᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅ ᴀᴄᴄᴇss!"
+            "❌ ʙᴀʙʏ ᴏɴʟʏ ᴘᴀɪᴅ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.\nᴅᴍ @aiused ғᴏʀ ᴘᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅ ᴀᴄᴄᴇss!"
         )
 
     args = message.text.split()
@@ -157,7 +157,7 @@ async def upinum(client: Client, message: Message):
     if not final_text:
         return await status.edit_text(
             "📞 UPI Number Result:\n```\nmessage- No matching records found\n```\n"
-            "<pre>ᴘᴏᴡᴇʀᴇᴅ ʙʏ - ꭙꤪꤨꤪ 𝐁𝐌𝐖☻ ⌯</pre>"
+            "<pre>ᴘᴏᴡᴇʀᴇᴅ ʙʏ - ꭙꤪꤨꤪ Gojo ⌯</pre>"
         )
 
     await client.send_message(message.chat.id, final_text)
